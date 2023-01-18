@@ -1,0 +1,64 @@
+html {
+  background: darkblue url('./public/timeStamp.jpeg');
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  min-height: 100hv;
+  align-items: center;
+}
+
+.clock {
+  padding: 10px;
+  width: 20rem;
+  height: 20rem;
+  border: 20px solid rgb(20, 20, 20);
+  border-radius: 50%;
+  margin: 50px auto;
+  box-shadow:  0px 0px 38px 20px rgba(0, 0, 0, 0.63);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  border-radius: 50%;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  margin: auto 0;
+  height: 6px;
+  background-color: black;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.075s;
+  box-shadow: 0px 0px 38px 5px rgba(255, 255, 255, 0.25);
+}
+
+.hour-hand {
+    left: 25%;
+    width: 25%;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.04, 2.53);
+}
+
+.minute-hand {
+  left: 10%;
+  width: 40%;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.04, 2.53);
+}
+
+.second-hand {
+  width: 50%;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.04, 2.53);
+}
